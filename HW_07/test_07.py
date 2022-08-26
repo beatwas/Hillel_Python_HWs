@@ -17,14 +17,14 @@ class DigitalCounter:
         else:
             self.start = start
             self.end = end
-        if current < start | current > end:
+        if current < start or current > end:
             self.current = None
             print("Incorrect class creation. Values are set by default")
         else:
             self.current = current
 
     def increase(self):
-        if self.current is None | self.current < self.start | self.current > self.end:
+        if self.current is None or self.current < self.start or self.current > self.end:
             self.current = self.start + 1
         elif self.current < self.end:
             self.current += 1

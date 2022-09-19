@@ -6,7 +6,13 @@
 
 {% block content %}
     <h1>List of tracks</h1>
+    <table>
     {% for track in tracks %}
-        <p>{{track['Name']}}</p>
+        <tr>
+            <td>{{track['Track name']}}</td>
+            <td></td>
+            <td>{{track['Price']}}</td>
+        </tr>
     {% endfor %}
+    </table>
 {% endblock %}

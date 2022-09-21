@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Request
+{% endblock %}
+
+{% block content %}
+    <form method="get" name="form1">
+    	<select name="currency" required="required">
+    {% for item in data %}
+    		<option value="{{item['code'].lower()}}">{{item['name']}}</option>
+    {% endfor %}
+    	</select>
+        <input type = "submit" value = "submit">
+    </form>
+{% endblock %}

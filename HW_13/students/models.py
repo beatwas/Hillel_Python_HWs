@@ -1,7 +1,9 @@
 from datetime import date
 
+from django.core.exceptions import ValidationError
 from django.core.validators import MinLengthValidator
 from django.db import models
+
 from faker import Faker
 
 # from .validators import valid_email_domains
